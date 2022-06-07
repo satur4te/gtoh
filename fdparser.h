@@ -8,14 +8,16 @@
 #include <string>
 
 /*
- * Utility class that copies files and directory structure by given paths
+ * Utility class that consists of only one method that copies files and directory structure by given paths
  * If faces *.gml, calls gemparses' parse method.
  */
 
 class fdparser {
 
 public:
-    static void parse(std::string in_dir, std::string out_dir);
+    static void parse(const std::string& in_path, const std::string& out_path);
+private:
+    fdparser();
 };
 
 

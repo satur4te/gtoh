@@ -8,7 +8,7 @@
 #include "gemparser.h"
 
 
-void gemparser::parse(std::string in_path, std::string out_path) {
+void gemparser::parse(const std::string& in_path, const std::string& out_path) {
     std::ifstream infile(in_path);
     std::ofstream outfile(out_path);
     const std::string init_regex_array[6] = {"^# (.*)", "^## (.*)", "^### (.*)","^\\* (.*)", "^=> (.*?) (.*)", "^[^<].*"};
@@ -28,5 +28,10 @@ void gemparser::parse(std::string in_path, std::string out_path) {
         }
 
         infile.close();
+        outfile.close();
     }
+}
+
+gemparser::gemparser() {
+
 }
