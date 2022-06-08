@@ -12,7 +12,7 @@
 
 #include <string>
 
-// .gem parser
+// .gem translator
 class gemtranslator {
 
 public:
