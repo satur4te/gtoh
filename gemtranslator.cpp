@@ -11,10 +11,10 @@ void gemtranslator::translate(const std::string& in_path, const std::string& out
     std::ifstream infile(in_path);
     std::ofstream outfile(out_path);
     // Array of strings representing tags in .gem file
-    const std::string init_regex_array[8] = {"^# (.*)", "^## (.*)", "^### (.*)", "^\\* (.*)",
+    const std::string init_regex_array[7] = {"^# (.*)", "^## (.*)", "^### (.*)", "^\\* (.*)",
                                              "^=> (.*?) (.*)", "^> (.*)", "^[^<].*"};
     // Array of strings representing corresponding html tags
-    const std::string substitute_regex_array[8] = {"<h1>$1</h1>", "<h2>$1</h2>", "<h3>$1</h3>","<li>$1</li>",
+    const std::string substitute_regex_array[7] = {"<h1>$1</h1>", "<h2>$1</h2>", "<h3>$1</h3>","<li>$1</li>",
                                                    "<a href='$1'>$2</a>", "<blockquote>$1</blockquote>","<p>$0</p>"};
 
     if (infile.is_open() && outfile.is_open()) {
